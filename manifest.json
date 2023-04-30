@@ -1,0 +1,25 @@
+{
+  "name": "Fuck the not be saved",
+  "description": "某些网站会默认阻止页面关闭或刷新，给人带来糟糕的体验，本拓展尝试屏蔽这种行为。",
+  "version": "0.0.1",
+  "author": "Abiee",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js": ["inject.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [ "main.js" ],
+      "matches": [ "https://*/*" ]
+    }
+  ],
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  }
+}
